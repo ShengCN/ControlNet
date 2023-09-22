@@ -27,7 +27,7 @@ model.only_mid_control = only_mid_control
 # Misc
 dataset = MyDataset()
 dataloader = DataLoader(dataset, num_workers=0, batch_size=batch_size, shuffle=True)
-logger = ImageLogger(batch_frequency=logger_freq)
+logger = ImageLogger(batch_frequency=logger_freq, save_sub_dir='img_log/ori_tutorial')
 trainer = pl.Trainer(gpus=1, precision=32, callbacks=[logger])
 
 
